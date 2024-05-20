@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce6e18e3-5970-4f95-9cf8-a0a1ac45dcec" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PongGame/src/Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/PongGame/src/Ball.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PongGame/src/GameFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/PongGame/src/GameFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PongGame/src/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/PongGame/src/GamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PongGame/src/Paddle.java" beforeDir="false" afterPath="$PROJECT_DIR$/PongGame/src/Paddle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PongGame/src/PongGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/PongGame/src/PongGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PongGame/src/Score.java" beforeDir="false" afterPath="$PROJECT_DIR$/PongGame/src/Score.java" afterDir="false" />
-    </list>
+    <list default="true" id="ce6e18e3-5970-4f95-9cf8-a0a1ac45dcec" name="Changes" comment="create methods" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,6 +36,9 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -56,11 +51,24 @@
       <option name="presentableId" value="Default" />
       <updated>1716055629286</updated>
       <workItem from="1716055639386" duration="32000" />
-      <workItem from="1716225285761" duration="4140000" />
+      <workItem from="1716225285761" duration="4415000" />
     </task>
+    <task id="LOCAL-00001" summary="create methods">
+      <option name="closed" value="true" />
+      <created>1716229466741</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1716229466741</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="create methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="create methods" />
   </component>
 </project>
