@@ -3,7 +3,6 @@ Welcome to my Java mini-project repository! This repository contains a collectio
 <hr>
 ## 01. Java Pong Game 🏓 
 ![WhatsApp Image 2024-05-23 at 00 12 13_c5ad967c](https://github.com/Gihansachith92/Java-Mini-Projects-/assets/110083916/6d1fbc90-892a-4966-81a5-2b8cc37be0ba)
-
 ### Project Description:
 
   This project is a simple implementation of the Pong game written in Java. It utilizes core Java concepts like object-oriented programming, event handling, and graphics rendering.
