@@ -27,8 +27,7 @@ This project is a simple implementation of the Pong game written in Java. It uti
 - A Java IDE (e.g., IntelliJ IDEA, Eclipse)
 
 #### Clone the Repository:
-
-```bash
+- bash
 git clone https://github.com/Gihansachith92/Java-Mini-Projects-.git
 
 ## 02. Snake Game 🐍
@@ -54,6 +53,6 @@ This project is a simple implementation of the classic Snake game. It leverages 
 
 #### Clone the Repository:
 
-```bash
+- bash
 git clone https://github.com/Gihansachith92/Java-Mini-Projects-.git
 
