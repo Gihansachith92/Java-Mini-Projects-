@@ -30,6 +30,8 @@ This project is a simple implementation of the Pong game written in Java. It uti
 - bash
 git clone https://github.com/Gihansachith92/Java-Mini-Projects-.git
 
+---
+
 ## 02. Snake Game 🐍
 
 ![Snake Game Screenshot](https://github.com/Gihansachith92/Java-Mini-Projects-/assets/110083916/cf3ffe09-1cee-438a-9f2b-7b6aefca1989)
