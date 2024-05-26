@@ -46,3 +46,36 @@ This project is licensed under the MIT License.
 ### Author:
 
 [Gihan Sachith]
+
+## Snake Game 🐍
+![Untitled](https://github.com/Gihansachith92/Java-Mini-Projects-/assets/110083916/cf3ffe09-1cee-438a-9f2b-7b6aefca1989)
+This repository contains a mini implementation of the classic Snake game   developed in Java.
+
+### Features:
+
+Basic snake movement with keyboard controls (WASD) ️
+Food generation for the snake to grow
+Game over detection when the snake hits the wall or itself
+Getting Started:
+
+### Clone this repository:
+git clone https://github.com/Gihansachith92/Java-Mini-Projects-.git
+Install any required dependencies (if any).
+
+Open the project in your preferred IDE (e.g., IntelliJ IDEA, Eclipse).
+
+Run the SnakeGame.java class to start playing!
+
+### Feel free to contribute!
+
+This is a basic implementation, and there's always room for improvement. You can contribute by:
+
+### Adding features like difficulty levels or obstacles
+Implementing a scoring system
+Enhancing the visuals and sound effects
+
+### Let's make this snake even more fun! ✨
+
+### License:
+
+This project is licensed under the MIT License (see LICENSE file for details).
