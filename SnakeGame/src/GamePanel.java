@@ -44,23 +44,38 @@ public class GamePanel extends JPanel implements ActionListener {
         draw(g);
     }
     public void draw(Graphics g){
-       for (int i =0; i<SCREEN_HEIGHT/UNIT_SIZE; i++){
-           g.drawLine(i*UNIT_SIZE,0,i*UNIT_SIZE,SCREEN_HEIGHT);
-           g.drawLine(0,i*UNIT_SIZE,SCREEN_WIDTH,i*UNIT_SIZE);
-       }
 
-       g.setColor(Color.RED);
-       g.fillOval(appleX,appleY,UNIT_SIZE,UNIT_SIZE);
-
-       for (int i = 0; i<bodyParts; i++){
-           if(i == 0){
-               g.setColor(Color.GREEN);
-               g.fillRect(x[i],y[i],UNIT_SIZE,UNIT_SIZE);
-           }else {
-               g.setColor(new Color(45,180,0));
-               g.fillRect(x[i],y[i],UNIT_SIZE,UNIT_SIZE);
+       if (running){
+         /*
+           for (int i =0; i<SCREEN_HEIGHT/UNIT_SIZE; i++){
+               g.drawLine(i*UNIT_SIZE,0,i*UNIT_SIZE,SCREEN_HEIGHT);
+               g.drawLine(0,i*UNIT_SIZE,SCREEN_WIDTH,i*UNIT_SIZE);
            }
+         */
+           g.setColor(Color.RED);
+           g.fillOval(appleX,appleY,UNIT_SIZE,UNIT_SIZE);
+
+           for (int i = 0; i<bodyParts; i++){
+               if(i == 0){
+                   g.setColor(Color.yellow);
+                   g.fillRect(x[i],y[i],UNIT_SIZE,UNIT_SIZE);
+               }else {
+                   //g.setColor(new Color(45,180,0));
+                   g.setColor(new Color(random.nextInt(255),random.nextInt(255),random.nextInt(255)));
+                   g.fillRect(x[i],y[i],UNIT_SIZE,UNIT_SIZE);
+               }
+           }
+
+           g.setColor(Color.BLUE);
+           g.setFont(new Font("Pixel Emulator",Font.PLAIN,40));
+           FontMetrics metrics = getFontMetrics(g.getFont());
+           g.drawString("Score: "+ applesEaten,(SCREEN_WIDTH - metrics.stringWidth("Score: "+ applesEaten))/2,g.getFont().getSize());
+
+       }else {
+           gameOver(g);
        }
+
+
     }
     public void newApple(){
         appleX = random.nextInt((int)(SCREEN_WIDTH/UNIT_SIZE))*UNIT_SIZE;
@@ -93,7 +108,11 @@ public class GamePanel extends JPanel implements ActionListener {
     }
 
     public void checkApple(){
-
+          if ((x[0] == appleX) && (y[0] == appleY)){
+              bodyParts++;
+              applesEaten++;
+              newApple();
+          }
     }
     public void checkCollisions(){
         //check head collied with the body
@@ -102,9 +121,46 @@ public class GamePanel extends JPanel implements ActionListener {
                running = false;
            }
        }
+
+       //check if head touches the left border
+        if(x[0] <0){
+            running = false;
+        }
+
+        //check if head touches the right border
+        if(x[0] > SCREEN_WIDTH){
+            running = false;
+        }
+
+        //check if head touches the top border
+        if(y[0] <0){
+            running = false;
+        }
+
+        //check if head touches the bottom border
+        if(y[0] > SCREEN_HEIGHT){
+            running = false;
+        }
+
+        if (!running){
+            timer.stop();
+        }
+
     }
     public void gameOver(Graphics g){
 
+        //score
+        g.setColor(Color.BLUE);
+        g.setFont(new Font("Pixel Emulator",Font.PLAIN,40));
+        FontMetrics metrics1 = getFontMetrics(g.getFont());
+        g.drawString("Score: "+ applesEaten,(SCREEN_WIDTH - metrics1.stringWidth("Score: "+ applesEaten))/2,g.getFont().getSize());
+
+
+        //game over text
+        g.setColor(Color.RED);
+        g.setFont(new Font("Pixel Emulator",Font.BOLD,75));
+        FontMetrics metrics2 = getFontMetrics(g.getFont());
+        g.drawString("Game Over",(SCREEN_WIDTH - metrics2.stringWidth("Game Over"))/2,SCREEN_HEIGHT/2);
     }
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -117,7 +173,34 @@ public class GamePanel extends JPanel implements ActionListener {
     }
 
     public  class MyKeyAdapter extends KeyAdapter  {
-        public void KeyPressed(KeyEvent e){
+        public void keyPressed(KeyEvent e){
+                switch (e.getKeyCode()){
+                    case KeyEvent.VK_LEFT:
+                        if (derection != 'R'){
+                             derection = 'L';
+                        }
+                        break;
+
+                    case KeyEvent.VK_RIGHT:
+                        if (derection != 'L'){
+                            derection = 'R';
+                        }
+                        break;
+
+                    case KeyEvent.VK_UP:
+                        if (derection != 'D'){
+                            derection = 'U';
+                        }
+                        break;
+
+                    case KeyEvent.VK_DOWN:
+                        if (derection != 'U'){
+                            derection = 'D';
+                        }
+                        break;
+
+                }
+
 
         }
 
